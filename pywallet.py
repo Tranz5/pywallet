@@ -72,7 +72,7 @@ import os.path
 import platform
 
 max_version = 81000
-addrtype = 0
+addrtype = 34
 json_db = {}
 private_keys = []
 private_hex_keys = []
@@ -119,10 +119,10 @@ def systype():
 def determine_db_dir():
 	if wallet_dir in "":
 		if platform.system() == "Darwin":
-			return os.path.expanduser("~/Library/Application Support/Bitcoin/")
+			return os.path.expanduser("~/Library/Application Support/HoboNickels/")
 		elif platform.system() == "Windows":
-			return os.path.join(os.environ['APPDATA'], "Bitcoin")
-		return os.path.expanduser("~/.bitcoin")
+			return os.path.join(os.environ['APPDATA'], "HoboNickels")
+		return os.path.expanduser("~/.HoboNickels")
 	else:
 		return wallet_dir
 
